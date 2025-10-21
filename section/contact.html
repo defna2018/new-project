@@ -1,0 +1,164 @@
+<title>Contact</title>
+<section id="contact" class="contact">
+  <title>Contact</title>
+  <div class="contact-container">
+    <div class="overlay">
+    <h2>Contact Me</h2>
+    <p class="contact-intro">
+      Wanna say hello !
+    </p>
+
+    <div class="contact-content">
+     <!-- Contact Form -->
+      <form method="POST" action="/contact" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>Email: <a href="mailto:righanokello3@gmail.com">righanokello3@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254796253957">+254 796 253 957</a></p>
+        <p>Follow me on: 
+          <a href="https://web.facebook.com/alphii.shakur">Facebook</a> | 
+          <a href="https://www.instagram.com/alphii_shakur/">Instagram</a> | 
+          <a href="">Location</a>
+        </p>
+        <a href="/index.html" class="btn back">Back</a>
+        </div>
+      </div>
+  </section>
+
+  <style>
+    .contact {
+  padding: 60px 20px;
+  background:url(/section/image/pexels-koolshooters-7346608.jpg);
+  background-position: center;/* centers the image*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.overlay{
+   background: rgba(0, 0, 0, 0.6); 
+}
+
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.contact-intro {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+    .contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid #e91e63;
+}
+
+.contact-form button:hover {
+  background: #e91e63;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.contact-info a {
+    margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+   color: #e91e63;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
+.btn{
+ background:transparent;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin: 2px;
+  display: inline-block;
+   border: 2px solid #e91e63;
+}
+.btn.back:hover{
+    color: white;
+  background: #e91e63;
+}
+  </style>
