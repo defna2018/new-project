@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+/* Countdown */
+.countdown-header{
+  text-align:center;
+  background:#111;
+  color:white;
+}
+
+.countdown-title{
+  font-size:15px;
+  letter-spacing:2px;
+  font-family:'Playfair Display', serif;
+  color:#c7a76d;
+}
+
+.countdown-container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.time-box{
+  background:#1b1b1b;
+  border-radius:10px;
+  min-width:40px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+
+.time-box span{
+  font-size:15px;
+  font-weight:bold;
+  color:#c7a76d;
+}
+
+.time-box p{
+  font-size:14px;
+  margin-top:5px;
+  color:#ccc;
+  letter-spacing:1px;
+}
+/* Navbar */
+header {
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(27, 27, 27, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #c7a76d;
+}
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #c7a76d;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('/section/image/bag\ 1.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+.hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+.btn-hero {
+  padding: 14px 35px;
+  background: #c7a76d;
+  color: #1b1b1b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 40px;
+  transition: all 0.4s ease;
+}
+.btn-hero:hover {
+  background: #e0c67a;
+  transform: translateY(-3px);
+}
+
+/* About Section */
+.about {
+  padding: 80px 10%;
+  text-align: center;
+}
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #c7a76d;
+  margin-bottom: 25px;
+}
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 80px 10%;
+  text-align: center;
+}
+.gallery h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #c7a76d;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.5s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.08);
+}
+.gallery-btn {
+  margin-top: 30px;
+}
+
+/* Contact Section */
+.contact-info {
+  padding: 60px 10%;
+  text-align: center;
+}
+.contact-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #c7a76d;
+}
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+.contact-info a {
+  color: #c7a76d;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  color: #e0c67a;
+}
+
+/* Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 38px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+}

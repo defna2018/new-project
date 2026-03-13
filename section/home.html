@@ -1,0 +1,158 @@
+<title>Home</title>
+
+<header>
+  <h1>Fashion & Design</h1>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/section/about.html">About</a>
+    <a href="/section/gallery.html">Collection</a>
+    <a href="/section/contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Where Fashion Meets Creativity</h2>
+    <p>Discover designs that define your style</p>
+    <a href="/section/gallery.html" class="btn-hero">Explore Collection</a>
+  </div>
+</section>
+
+<!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Welcome to MyFashion! I’m a passionate fashion designer blending creativity 
+      and modern trends to create timeless styles. Each piece tells a story and 
+      brings confidence to whoever wears it.
+    </p>
+  </section>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+/* Navbar */
+header {
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(27, 27, 27, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+header h1 {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  color: #c7a76d; /* gold accent */
+}
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #c7a76d;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('/section/image/bag\ 1.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+.hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+.btn-hero {
+  padding: 14px 35px;
+  background: #c7a76d; /* gold */
+  color: #1b1b1b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 40px;
+  transition: all 0.4s ease;
+}
+.btn-hero:hover {
+  background: #e0c67a;
+  transform: translateY(-3px);
+}
+
+/* About Section */
+.about {
+  padding: 80px 10%;
+  text-align: center;
+}
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #c7a76d;
+  margin-bottom: 25px;
+}
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 38px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+}
+
+</style>

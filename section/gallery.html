@@ -1,0 +1,136 @@
+<title>Collection</title>
+
+<section id="gallery" class="gallery">
+  <div class="gallery-header">
+    <h2>Latest Collection</h2>
+    <span class="subtitle">Curated modern fashion pieces</span>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="/section/image/pexels-skylight-views-2151863365-32655427.jpg" alt="Fashion 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-cristian-cativo-555686567-30110876.jpg" alt="Fashion 2">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/man 1.jpg" alt="Fashion 3">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-gabby-k-7139186.jpg" alt="Fashion 4">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-talalih-10077946.jpg" alt="Fashion 5">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-dhanno-29413649.jpg" alt="Fashion 6">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-marcus-queiroga-silva-86421404-33748794.jpg" alt="Fashion 7">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-boko-shots-812604874-29857631.jpg" alt="Fashion 8">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-alameenng-33956638.jpg" alt="Fashion 9">
+    </div>
+    <div class="gallery-item">
+      <img src="/section/image/pexels-jopwell-2422285.jpg" alt="Fashion 10">
+    </div>
+  </div>
+
+  <div class="back-wrapper">
+    <a href="/index.html" class="btn back">← Back to Home</a>
+  </div>
+</section>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+.gallery {
+  padding: 80px 8%;
+  background: #1b1b1b;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gallery h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #c7a76d; /* gold accent */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Back button */
+.back-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn.back {
+  padding: 12px 30px;
+  border: 1px solid #c7a76d;
+  color: #c7a76d;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: all 0.4s ease;
+}
+
+.btn.back:hover {
+  background: #c7a76d;
+  color: #1b1b1b;
+}
+
+</style>
