@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion & Design</title>
+  <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+
+  
+  <!-- Navbar -->
+  <header>
+    <h1>Fashion & Design</h1>
+    <nav>
+      <a href="/section/home.html">Home</a>
+      <a href="/section/about.html">About</a>
+      <a href="/section/gallery.html">Collection</a>
+      <a href="/section/contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <!--countdown-->
+  <header class="countdown-header">
+
+  <h3 class="countdown-title">Next Collection Launch</h3>
+
+  <div id="countdown" class="countdown-container">
+
+    <div class="time-box">
+      <span id="days">00</span>
+      <p>Days</p>
+    </div>
+
+    <div class="time-box">
+      <span id="hours">00</span>
+      <p>Hours</p>
+    </div>
+
+    <div class="time-box">
+      <span id="minutes">00</span>
+      <p>Minutes</p>
+    </div>
+
+    <div class="time-box">
+      <span id="seconds">00</span>
+      <p>Seconds</p>
+    </div>
+  </div>
+</header>
+<script>
+
+const targetDate = new Date("June 5, 2026 12:00:00").getTime();
+
+function updateCountdown(){
+
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if(distance <= 0){
+    document.getElementById("countdown").innerHTML = "Collection Launched!";
+    clearInterval(timer);
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+}
+
+const timer = setInterval(updateCountdown,1000);
+
+updateCountdown();
+
+</script>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Where Fashion Meets Creativity</h2>
+      <p>Discover designs that define your style</p>
+      <a href="/section/gallery.html" class="btn-hero">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Welcome to MyFashion! I’m a passionate fashion designer blending creativity 
+      and modern trends to create timeless styles. Each piece tells a story and 
+      brings confidence to whoever wears it.
+    </p>
+  </section>
+
+  <!-- Featured Collection Preview -->
+  <section id="gallery" class="gallery">
+    <h2>Latest Collection</h2>
+    <div class="gallery-grid">
+      <img src="/section/image/pexels-skylight-views-2151863365-32655427.jpg" alt="Fashion 1">
+      <img src="/section/image/pexels-cristian-cativo-555686567-30110876.jpg" alt="Fashion 2">
+      <img src="/section/image/man 1.jpg" alt="Fashion 3">
+      <img src="/section/image/pexels-gabby-k-7139186.jpg" alt="Fashion 4">
+    </div>
+    <div class="gallery-btn">
+      <a href="/section/gallery.html" class="btn-hero">View Full Collection</a>
+    </div>
+  </section>  
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-info">
+    <h3>Get in Touch</h3>
+    <p>Email: <a href="mailto:righanokello3@gmail.com">righanokello3@gmail.com</a></p>
+    <p>Phone: <a href="tel:+254796253957">+254 796 253 957</a></p>
+    <p>Follow me on: 
+      <a href="https://web.facebook.com/alphii.shakur">Facebook</a> | 
+      <a href="https://www.instagram.com/alphii_shakur/">Instagram</a> | 
+      <a href="https://www.google.com/maps/place/Siaya+Community+Digital+Hub/@-0.0980225,34.2730062,211m/">Location</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyFashion. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
