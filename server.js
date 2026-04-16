@@ -23,14 +23,14 @@ app.use(express.static("public"));
     let transporter = nodemailer.createTransport({
 
       auth: {
-        user: "YOUR_EMAIL@gmail.com",
-        pass: "YOUR_APP_PASSWORD"
+        user: "okellorighan3@gmail.com",
+        pass: "qsnfuhkoxrmjgrsr"
       }
     });
 
     let mailOptions = {
       from: `"${name}" <${email}>`,
-      to: "YOUR_EMAIL@gmail.com",
+      to: "okellorighan3@gmail.com",
       subject: `New Contact Message from ${name}`,
       text: `
 Name: ${name}
