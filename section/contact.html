@@ -1,122 +1,334 @@
 <title>Contact</title>
-<!-- Luxury AI Assistant Widget -->
+
+<!-- 💬 AI TOGGLE BUTTON -->
+<button id="ai-toggle-btn">💬</button>
+
+<!-- 🤖 AI WIDGET -->
 <div id="ai-widget">
   <div class="ai-header">
     <span>Assistant</span>
     <button id="close-widget">&times;</button>
   </div>
+
   <div id="ai-messages"></div>
+
   <div class="ai-input">
     <input type="text" id="ai-user-input" placeholder="Ask me anything...">
     <button id="ai-send-btn">Send</button>
   </div>
 </div>
 
-<button id="ai-toggle-btn">💬</button>
+<!-- 🖤 CONTACT SECTION -->
+<section class="contact">
 
-
-<section id="contact" class="contact">
   <div class="overlay">
     <div class="contact-container">
 
-      <h2>Oder Now 😊</h2>
+      <h2>Order Now</h2>
       <div class="divider"></div>
       <p class="contact-intro">Let’s create something beautiful together</p>
 
-      <div class="contact-content">
+      <!-- CONTACT CARDS -->
+      <div class="contact-cards">
 
-        <!-- Contact Form -->
-        <form method="POST" action="/contact" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="card">
+          <div class="icon">📧</div>
+          <h3>Email</h3>
+          <p><a href="mailto:righanokello3@gmail.com">righanokello3@gmail.com</a></p>
+        </div>
 
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
+        <div class="card">
+          <div class="icon">📞</div>
+          <h3>Phone</h3>
+          <p><a href="tel:+254796253957">+254 796 253 957</a></p>
+        </div>
 
-          <p>
-            <a href="mailto:righanokello3@gmail.com">righanokello3@gmail.com</a>
-          </p>
-
-          <p>
-            <a href="tel:+254796253957">+254 796 253 957</a>
-          </p>
-
-          <p class="socials">
-            <a href="https://web.facebook.com/alphii.shakur">Facebook</a>
-            <span>—</span>
-            <a href="https://www.instagram.com/alphii_shakur/">Instagram</a>
-          </p>
-
-          <a href="/index.html" class="back-link">Return Home</a>
+        <div class="card">
+          <div class="icon">📍</div>
+          <h3>Location</h3>
+          <p><a href="https://www.google.com/maps/place/Siaya+Community+Digital+Hub/">View Location</a></p>
         </div>
 
       </div>
-    </div>
+
+      <!-- FORM -->
+      <div class="contact-main">
+        <div class="contact-form">
+
+          <div class="form-row">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Phone">
+          </div>
+
+          <div class="form-row">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Subject">
+          </div>
+
+          <textarea placeholder="Message"></textarea>
+
+          <button>Send Message</button>
+
+        </div>
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="socials">
+        <p>Follow me:</p>
+        <a href="https://web.facebook.com/alphii.shakur">Facebook</a>
+        <a href="https://www.instagram.com/alphii_shakur/">Instagram</a>
+      </div>
+
+      <!-- BACK -->
+      <div class="back-wrapper">
+  <a href="/index.html" class="btn back">← Back</a>
+</div>
   </div>
+
 </section>
-<script>
-const toggleBtn = document.getElementById('ai-toggle-btn');
-const widget = document.getElementById('ai-widget');
-const closeBtn = document.getElementById('close-widget');
-const sendBtn = document.getElementById('ai-send-btn');
-const userInput = document.getElementById('ai-user-input');
-const messages = document.getElementById('ai-messages');
 
-// Toggle widget
-toggleBtn.addEventListener('click', () => widget.style.display = 'flex');
-closeBtn.addEventListener('click', () => widget.style.display = 'none');
+<!-- 💬 WHATSAPP -->
+<a href="https://wa.me/254796253957" class="whatsapp-btn" target="_blank">
+  💬
+</a>
 
-// Send message
-sendBtn.addEventListener('click', sendMessage);
-userInput.addEventListener('keypress', e => { if(e.key === 'Enter') sendMessage(); });
-
-async function sendMessage() {
-  const text = userInput.value.trim();
-  if(!text) return;
-  
-  // Add user message
-  const userMsg = document.createElement('p');
-  userMsg.classList.add('user-msg');
-  userMsg.textContent = text;
-  messages.appendChild(userMsg);
-  messages.scrollTop = messages.scrollHeight;
-  userInput.value = '';
-
-  // Show "typing..." indicator
-  const typingMsg = document.createElement('p');
-  typingMsg.classList.add('ai-msg');
-  typingMsg.textContent = 'Typing...';
-  messages.appendChild(typingMsg);
-  messages.scrollTop = messages.scrollHeight;
-
-  // Call backend (replace '/api/ai-chat' with your endpoint)
-  try {
-   const response = await fetch('http://localhost:3000/api/ai-chat', { // defna.netlify.app
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ message: text })
-});
-
-    const data = await response.json();
-    typingMsg.textContent = data.reply || "Sorry, I couldn't understand that.";
-    messages.scrollTop = messages.scrollHeight;
-  } catch(err) {
-    typingMsg.textContent = "Error connecting to AI.";
-  }
-}
-</script>
-
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 MyFashion. All Rights Reserved.</p>
+</footer>
 <style>
-  /* AI Widget Toggle Button */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+/* =========================
+   CONTACT SECTION BACKGROUND
+========================= */
+.contact {
+  background: url(/section/image/pexels-koolshooters-7346608.jpg) center/cover no-repeat;
+  min-height: 100vh;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.75);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* TITLE */
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: #c7a76d;
+  letter-spacing: 2px;
+}
+
+.divider {
+  width: 70px;
+  height: 2px;
+  background: #c7a76d;
+  margin: 20px auto;
+}
+
+.contact-intro {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   CONTACT CARDS
+========================= */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #111;
+  padding: 25px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid rgba(199,167,109,0.2);
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(199,167,109,0.4);
+  border-color: #c7a76d;
+}
+
+.icon {
+  font-size: 35px;
+  color: #c7a76d;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: #c7a76d;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #c7a76d;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-form {
+  width: 500px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  border: 1px solid rgba(199,167,109,0.2);
+  color: #fff;
+  border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(199,167,109,0.6);
+  border-color: #c7a76d;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #c7a76d, #e0c67a);
+  color: #1b1b1b;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(199,167,109,0.6);
+}
+
+/* =========================
+   SOCIALS
+========================= */
+.socials {
+  margin-top: 30px;
+}
+
+.socials p {
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #c7a76d;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+/* =========================
+   BACK LINK
+========================= */
+.back-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn.back {
+  padding: 12px 20px;
+  border: 1px solid #c7a76d;
+  color: #c7a76d;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: all 0.4s ease;
+}
+
+.btn.back:hover {
+  background: #c7a76d;
+  color: #1b1b1b;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25D366;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   AI WIDGET BUTTON
+========================= */
 #ai-toggle-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #cfa45d;
+  background: #c7a76d;
   color: #1b1b1b;
   border: none;
   border-radius: 50%;
@@ -124,11 +336,16 @@ async function sendMessage() {
   height: 60px;
   font-size: 28px;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   z-index: 9999;
 }
 
-/* Widget Container */
+#ai-toggle-btn:hover {
+  box-shadow: 0 0 20px rgba(199,167,109,0.7);
+}
+
+/* =========================
+   AI WIDGET BOX
+========================= */
 #ai-widget {
   position: fixed;
   bottom: 90px;
@@ -137,24 +354,22 @@ async function sendMessage() {
   max-height: 500px;
   background: #1b1b1b;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   display: none;
   flex-direction: column;
   overflow: hidden;
   z-index: 9998;
-  font-family: 'Poppins', sans-serif;
 }
 
-/* Header */
 .ai-header {
   background: #c7a76d;
   color: #1b1b1b;
   padding: 15px;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  font-weight: bold;
 }
+
 .ai-header button {
   background: none;
   border: none;
@@ -162,222 +377,101 @@ async function sendMessage() {
   cursor: pointer;
 }
 
-/* Messages */
+/* MESSAGES */
 #ai-messages {
   padding: 15px;
   flex: 1;
   overflow-y: auto;
-  font-size: 14px;
-}
-#ai-messages p {
-  margin-bottom: 10px;
-}
-#ai-messages .user-msg {
-  text-align: right;
-  color: #c7a76d;
-}
-#ai-messages .ai-msg {
-  text-align: left;
-  color: #fff;
 }
 
-/* Input */
+.user-msg {
+  text-align: right;
+  color: #c7a76d;
+  margin-bottom: 10px;
+}
+
+.ai-msg {
+  text-align: left;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* INPUT */
 .ai-input {
   display: flex;
   border-top: 1px solid #444;
 }
+
 .ai-input input {
   flex: 1;
   padding: 10px;
-  border: none;
-  outline: none;
   background: #111;
+  border: none;
   color: #fff;
+  outline: none;
 }
+
 .ai-input button {
   background: #c7a76d;
   color: #1b1b1b;
   border: none;
   padding: 0 20px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
 }
+
 .ai-input button:hover {
   background: #e0c67a;
 }
 
-/* Scrollbar for messages */
+/* SCROLLBAR */
 #ai-messages::-webkit-scrollbar {
   width: 6px;
 }
+
 #ai-messages::-webkit-scrollbar-thumb {
   background: #c7a76d;
   border-radius: 3px;
 }
-
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
-
-.contact {
-  background: url(/section/image/pexels-koolshooters-7346608.jpg) center/cover no-repeat;
-  height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.75);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-container {
-  max-width: 1100px;
-  width: 100%;
-  padding: 60px 40px;
-  color: #f5f5f5;
-}
-
-.contact h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+/* FOOTER */
+.footer {
+  background: #000;
+  padding: 20px;
   text-align: center;
-}
-
-.divider {
-  width: 70px;
-  height: 2px;
-  background: #cfa45d;
-  margin: 25px auto;
-}
-
-.contact-intro {
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-bottom: 60px;
-  color: #ddd;
-}
-
-/* Layout */
-.contact-content {
-  display: flex;
-  gap: 80px;
-  justify-content: center;
-}
-
-/* Form */
-.contact-form {
-  flex: 1;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #cfa45d;
-  padding: 12px 5px;
-  color: #fff;
-  font-size: 14px;
-  outline: none;
-}
-
-.contact-form textarea {
-  resize: none;
-  min-height: 120px;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-  letter-spacing: 1px;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 14px 40px;
-  background: transparent;
-  border: 1px solid #cfa45d;
-  color: #cfa45d;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.btn:hover {
-  background: #cfa45d;
-  color: #000;
-}
-
-/* Contact Info */
-.contact-info {
-  flex: 1;
-  max-width: 320px;
-}
-
-.contact-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin-bottom: 25px;
-}
-
-.contact-info p {
-  font-size: 14px;
-  margin-bottom: 18px;
-}
-
-.contact-info a {
-  color: #ddd;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.contact-info a:hover {
-  color: #cfa45d;
-}
-
-.socials span {
-  margin: 0 10px;
   color: #777;
+  border-top: 1px solid rgba(199,167,109,0.2);
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 40px;
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #aaa;
-  text-decoration: none;
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.back-link:hover {
-  color: #cfa45d;
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Mobile */
-@media (max-width: 900px) {
-  .contact-content {
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .contact h2 {
+    font-size: 32px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-row {
     flex-direction: column;
-    text-align: center;
-    gap: 40px;
   }
-.contact h2{
-  font-size: 36px;
-}
-  .contact-info {
-    margin-top: 20px;
-    max-width: 100%;
-  }
-}
 
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
