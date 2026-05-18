@@ -33,7 +33,7 @@ header {
 
 header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 35px;
   letter-spacing: 2px;
   color: #c7a76d;
 }
@@ -57,7 +57,7 @@ nav a:hover {
 }
 
 .countdown-title {
-  font-size: 25px;
+  font-size: 30px;
   letter-spacing: 2px;
   font-family: 'Playfair Display', serif;
   color: #c7a76d;

@@ -1,53 +1,32 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
+const path = require("path");
+const dotenv = require("dotenv").config();
 
 const app = express();
-const PORT = 5000;
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
-// Serve static files
-app.use(express.static("public"));
+// Middleware to read form data
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
+// Serve static files (html, css, js, images)
+app.use(express.static(path.join(__dirname, "..")));
+
 
 // Contact route
+const contactRoute = require("./routes/contact");
+app.use("/contact", contactRoute);
 
- app.post("/contact", async (req, res) => {
-  const { name, email, message } = req.body;
 
-  console.log(req.body); // 👈 see form data
-
-  try {
-    let transporter = nodemailer.createTransport({
-
-      auth: {
-        user: "okellorighan3@gmail.com",
-        pass: "qsnfuhkoxrmjgrsr"
-      }
-    });
-
-    let mailOptions = {
-      from: `"${name}" <${email}>`,
-      to: "okellorighan3@gmail.com",
-      subject: `New Contact Message from ${name}`,
-      text: `
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}
-      `
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    res.send("Message sent successfully");
-
-  } catch (err) {
-    console.error("EMAIL ERROR 👉", err); // 👈 SHOW REAL ERROR
-    res.status(500).send("error");
-  }
+// Default page
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "index.html"));
 });
 
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`✅ Server running at http://localhost:${PORT}`);
+});
