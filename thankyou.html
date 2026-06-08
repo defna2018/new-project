@@ -1,50 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thank You</title>
-</head>
-<body>
-  <div class="overlay">
-  <div class="thank">
-  <h1>✅ Thank you for contacting us!</h1>
-  <p>We’ve received your message and will get back to you soon.</p>
-  <a href="/" class="btn back"> Go back to Home</a>
-  </div>
-  </div>
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Successful</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
- .thank{
-    height: 90vh;
-  background: url('/section/image/bag\ 1.jpg') no-repeat center/cover;
-  display: block;
-  justify-content:first baseline;
-  align-items: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  }
-   .thank p{
-    font-size: 35px;
-  }
-   .btn{
- background:transparent;
-  padding: 2px 4px;
-  border-radius: 2px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  margin: 2px;
-  display: inline-block;
-   border: 2px solid #e91e63;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
-.btn.back:hover{
-  color: white;
-  background: #e91e63;
+
+body{
+    min-height:100vh;
+    background:url('/section/image/bag 1.jpg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.78);
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:600px;
+}
+
+.success-card{
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(20px);
+    border:2px solid #c7a76d;
+    border-radius:25px;
+    padding:50px 40px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(212,175,55,0.25);
+}
+
+.checkmark{
+    width:100px;
+    height:100px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#c7a76d,#ffd700);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:50px;
+    color:black;
+    font-weight:bold;
+    box-shadow:0 0 25px rgba(199,167,109,.6);
+}
+
+.membership-tag{
+    display:inline-block;
+    padding:8px 20px;
+    border:1px solid #c7a76d;
+    border-radius:50px;
+    color:#c7a76d;
+    font-size:13px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#c7a76d;
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+p{
+    color:#e5e5e5;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.highlight{
+    color:#c7a76d;
+    font-weight:600;
+}
+
+.info-box{
+    background:rgba(199,167,109,0.08);
+    border:1px solid rgba(199,167,109,0.3);
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:30px;
+}
+
+.info-box p{
+    margin:0;
+    color:#fff;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:linear-gradient(135deg,#c7a76d,#ffd700);
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(199,167,109,.4);
+}
+
+.footer-text{
+    margin-top:25px;
+    color:#aaa;
+    font-size:14px;
 }
 
 </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="success-card">
+
+        <div class="checkmark">
+            ✓
+        </div>
+
+        <div class="membership-tag">
+            PREMIUM MEMBER
+        </div>
+
+        <h1>Congratulations!</h1>
+
+        <p>
+            Welcome to our exclusive
+            <span class="highlight">Fashion & Design Community.</span>
+            Your subscription has been successfully completed and your membership is now active.
+        </p>
+
+        <div class="info-box">
+            <p>
+                You will now receive exclusive fashion updates,
+                luxury collection releases, design inspirations,
+                VIP offers, and member-only opportunities.
+            </p>
+        </div>
+
+        <a href="/section/gallery.html" class="btn">
+            Explore Our Collection
+        </a>
+
+        <div class="footer-text">
+            Thank you for choosing Fashion & Design.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

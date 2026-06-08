@@ -96,7 +96,7 @@
 
       <div class="client">
 
-        <img src="/section/image/addah 2.jpg" alt="Client">
+        <img src="/section/image/addah-2.jpg" alt="Client">
 
         <div>
           <h4>Addah Nyabera</h4>
@@ -177,14 +177,12 @@
       placeholder="example@gmail.com"
       required>
 
-      <button type="submit">
-        Subscribe
-      </button>
 
-    </form>
-
+    <a href="/thankyou.html" class="btn-subscribe">
+      Subscribe
+    </a>
+   </form>
   </div>
-
 </section>
 
 <style>
@@ -641,16 +639,16 @@ body{
   border-color:#c7a76d;
 }
 
-.newsletter-form button{
-  padding:16px 34px;
+.btn-subscribe{
+  padding:10px 24px;
 
   border:none;
 
   border-radius:40px;
 
-  background:#c7a76d;
+  background:black;
 
-  color:#000;
+  color:#c7a76d;
 
   font-weight:600;
 
@@ -659,10 +657,13 @@ body{
   transition:0.4s ease;
 }
 
-.newsletter-form button:hover{
-  background:#fff;
-
+.btn-subscribe:hover{
+  background:#c7a76d;
+  color:#000;
   transform:translateY(-3px);
+  box-shadow:
+  0 0 20px rgba(199,167,109,0.4);
+  
 }
 
 /* =========================

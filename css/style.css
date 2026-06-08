@@ -59,8 +59,8 @@ nav a:hover {
 }
 
 .logo {
-  width: 105px;
-  height: 105px;
+  width: 95px;
+  height: 95px;
   object-fit: contain;
 }
 
@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 .time-box span {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   color: #c7a76d;
 }
@@ -119,13 +119,13 @@ nav a:hover {
 }
 /* LIVE CLOCK */
 .live-clock{
-  margin-top:40px;
+  margin-top:20px;
   text-align:center;
 }
 
 .live-clock h3{
-  font-size:1.3rem;
-  margin-bottom:15px;
+  font-size: 0.7px;
+  margin-bottom:10px;
   color:#fff;
 }
 
@@ -133,13 +133,13 @@ nav a:hover {
   display:inline-block;
   background:#111;
   color:#c7a76d;
-  font-size:2rem;
-  font-weight:600;
+  font-size: 15px;
+  font-weight:200;
   letter-spacing:3px;
 }
 
 #date{
-  margin-top:10px;
+  margin-top:8px;
   color:#fff;
   font-size:1rem;
 }
