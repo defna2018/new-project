@@ -174,15 +174,61 @@
 
       <input
       type="email"
+      id="email"
       placeholder="example@gmail.com"
       required>
 
 
-    <a href="/thankyou.html" class="btn-subscribe">
-      Subscribe
-    </a>
+    <button type="submit" class="btn-subscribe">
+  Subscribe
+</button>
    </form>
   </div>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+// Initialize EmailJS
+emailjs.init("sFri5TP2nzdQEdZO4");
+
+// Newsletter Form
+document
+.getElementById("newsletter-form")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const email =
+    document.getElementById("email").value;
+
+    const params = {
+        subscriber_email: email
+    };
+
+    emailjs.send(
+        "service_vski5qe",
+        "template_s1mnyww",
+        params
+    )
+
+    .then(function(){
+
+        window.location.href =
+        "/thankyou.html";
+
+    })
+
+    .catch(function(error){
+
+        alert("Failed to subscribe. Please try again.");
+
+        console.log(error);
+
+    });
+
+});
+
+</script>
 </section>
 
 <style>
