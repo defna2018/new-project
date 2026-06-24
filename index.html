@@ -3,232 +3,1149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion & Design</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <title>Voice of Power | Motivational Speeches Collection</title>
+  <meta name="description" content="Transform your life with powerful motivational speeches. Premium collection of inspiring talks from world-renowned speakers.">
+  <meta name="keywords" content="motivational speeches, self improvement, inspirational books, personal development, success mindset">
+  <meta name="author" content="Voice of Power">
+  
+  <link rel="icon" type="image/png" href="/section/image/favicon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Paystack Inline Script -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 
 <body>
 
-<!-- 🔝 NAVBAR -->
-<header>
-
-  <a href="/section/image/logo.png" class="brand">
-    <img src="/section/image/logo.png" alt="Fashion & Design Logo" class="logo">
-    <span>Fashion & Design</span>
-  </a>
-
-  <nav>
-    <a href="/section/home.html">Home</a>
-    <a href="/section/about.html">About</a>
-    <a href="/section/gallery.html">Collection</a>
-    <a href="/section/contact.html">Contact</a>
-  </nav>
-
-</header>
-
-<!-- ⏳ COUNTDOWN + LIVE CLOCK -->
-<section class="countdown-header">
-
-  <h3 class="countdown-title">Next Collection Launch</h3>
-
-  <div id="countdown" class="countdown-container">
-    <div class="time-box"><span id="days">00</span><p>Days</p></div>
-    <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
-    <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
-    <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-text">Voice of Power</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
   </div>
 
-  <!-- LIVE CLOCK -->
-  <div class="live-clock">
-    <div id="clock">00:00:00</div>
-    <div id="date"></div>
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag" style="margin-right: 0.5rem; color: var(--gold);"></i> Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-total" id="cartTotal" style="display: none;">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span id="subtotal">Ksh 0</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Discount</span>
+        <span style="color: var(--accent-red);">-Ksh 0</span>
+      </div>
+      <div class="cart-total-row total">
+        <span>Total</span>
+        <span id="totalPrice">Ksh 0</span>
+      </div>
+    </div>
+    <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="openPaymentModal()">
+      <i class="fas fa-lock"></i> Checkout Securely
+    </button>
   </div>
 
-</section>
-
-
-<!-- 🏠 HERO -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h2>Where Fashion Meets Creativity</h2>
-    <p>Discover designs that define your style</p>
-    <a href="/section/gallery.html" class="btn-hero">
-      Explore Collection
+  <!-- Navbar -->
+  <header id="header">
+    <a href="#" class="brand">
+      <div class="brand-icon"><i class="fas fa-microphone-alt"></i></div>
+      <div>
+        <div class="brand-text">Voice of Power</div>
+        <div class="brand-tagline">Motivational Speeches</div>
+      </div>
     </a>
-  </div>
-</section>
 
-<!-- 👤 ABOUT -->
-<section id="about" class="about">
-  <h2>About Me</h2>
-
-  <p>
-    Welcome to <span>My Fashion</span>.
-    I am a fashion designer driven by refined aesthetics,
-    timeless elegance, and modern craftsmanship.
-
-    <br><br>
-
-    Each design is carefully curated to embody confidence,
-    individuality, and understated luxury—created for those
-    who value quality, detail, and enduring style.
-  </p>
-</section>
-
-<!-- 🖼️ GALLERY -->
-<section id="gallery" class="gallery">
-
-  <h2>Latest Collection</h2>
-
-  <div class="gallery-grid">
-    <img src="/section/image/women 1.3.jpg" alt="Women's Fashion">
-    <img src="/section/image/man 1.jpg" alt="Men's Fashion">
-    <img src="/section/image/kid 1.1.jpg" alt="Kids Fashion">
-    <img src="/section/image/bag 1.jpg" alt="Luxury Bags">
-    <img src="/section/image/shoes 1.3.jpg" alt="Designer Shoes">
-  </div>
-
-</section>
-
-<!-- 📞 CONTACT -->
-<section id="contact" class="contact-section">
-
-  <h2 class="contact-title">Get in Touch</h2>
-
-  <div class="contact-cards">
-
-    <div class="card">
-      <div class="icon">📧</div>
-      <h3>Email</h3>
-      <p>
-        <a href="mailto:righanokello3@gmail.com">
-          righanokello3@gmail.com
-        </a>
-      </p>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <div class="card">
-      <div class="icon">📞</div>
-      <h3>Phone</h3>
+    <nav id="mainNav">
+      <a href="#home" class="active">Home</a>
+      <a href="#books">Collection</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="javascript:void(0)" onclick="toggleCart()" style="position: relative;">
+        <i class="fas fa-shopping-bag"></i> Cart
+        <span class="cart-count" id="cartCount" style="display: none;">0</span>
+      </a>
+      <a href="#books" class="nav-cta">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-fire"></i> Over 50,000 Lives Transformed
+      </div>
+      <h1>
+        Unleash Your Potential
+        <span>Powerful Motivational Speeches That Change Lives</span>
+      </h1>
       <p>
-        <a href="tel:+254796253957">
-          +254 796 253 957
-        </a>
+        Access world-class motivational speeches from legendary speakers. 
+        Download, listen anywhere, and transform your mindset today.
       </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" id="statSpeeches">250+</span>
+          <span class="stat-label">Speeches</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="statSpeakers">45+</span>
+          <span class="stat-label">Speakers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="statHours">500+</span>
+          <span class="stat-label">Hours</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="statRating">4.9</span>
+          <span class="stat-label">Rating</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="#books" class="btn-primary">
+          <i class="fas fa-play-circle"></i> Explore Collection
+        </a>
+        <a href="#pricing" class="btn-secondary">
+          <i class="fas fa-headphones"></i> Start Free Trial
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Featured Books -->
+  <section class="featured" id="books">
+    <div class="section-header fade-in">
+      <span class="section-tag">Curated Collection</span>
+      <h2>Featured Speeches</h2>
+      <p>Hand-picked motivational speeches from the world's most influential voices, ready to inspire your next breakthrough.</p>
     </div>
 
-    <div class="card">
-      <div class="icon">📍</div>
-      <h3>Location</h3>
-      <p>
-        <a href="https://www.google.com/maps/place/Siaya+Community+Digital+Hub/">
-          View Location
-        </a>
-      </p>
+    <div class="books-grid">
+      <!-- Book 1 -->
+      <div class="book-card fade-in">
+        <div class="book-badge bestseller">Bestseller</div>
+        <div class="book-image">
+          <div class="book-cover">
+            <div class="book-cover-icon"><i class="fas fa-mountain"></i></div>
+            <div class="book-cover-title">The Summit Within</div>
+            <div class="book-cover-author">Marcus Sterling</div>
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Personal Growth</span>
+          <h3 class="book-title">The Summit Within: Conquering Your Inner Mountains</h3>
+          <p class="book-description">A powerful 45-minute speech on overcoming self-doubt and reaching your highest potential through mental resilience.</p>
+          <div class="book-meta">
+            <div class="book-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(2,847)</span>
+            </div>
+            <div class="book-duration">
+              <i class="fas fa-clock"></i> 45 min
+            </div>
+          </div>
+          <div class="book-price-row">
+            <div class="book-price">
+              <span class="price-current">Ksh 1,200</span>
+              <span class="price-original">Ksh 2,500</span>
+            </div>
+            <button class="btn-buy" onclick="addToCart('The Summit Within', 1200, 'Personal Growth')">
+              <i class="fas fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card fade-in">
+        <div class="book-badge">New</div>
+        <div class="book-image">
+          <div class="book-cover">
+            <div class="book-cover-icon"><i class="fas fa-bolt"></i></div>
+            <div class="book-cover-title">Rise & Grind</div>
+            <div class="book-cover-author">Elena Voss</div>
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Productivity</span>
+          <h3 class="book-title">Rise & Grind: The Morning Mastery Protocol</h3>
+          <p class="book-description">Transform your mornings and supercharge your productivity with this energizing 30-minute wake-up call to greatness.</p>
+          <div class="book-meta">
+            <div class="book-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(1,932)</span>
+            </div>
+            <div class="book-duration">
+              <i class="fas fa-clock"></i> 30 min
+            </div>
+          </div>
+          <div class="book-price-row">
+            <div class="book-price">
+              <span class="price-current">Ksh 900</span>
+              <span class="price-original">Ksh 1,800</span>
+            </div>
+            <button class="btn-buy" onclick="addToCart('Rise & Grind', 900, 'Productivity')">
+              <i class="fas fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-card fade-in">
+        <div class="book-image">
+          <div class="book-cover">
+            <div class="book-cover-icon"><i class="fas fa-crown"></i></div>
+            <div class="book-cover-title">The Champion's Mind</div>
+            <div class="book-cover-author">Righan Okello</div>
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Leadership</span>
+          <h3 class="book-title">The Champion's Mind: Leadership Under Pressure</h3>
+          <p class="book-description">Learn how elite performers maintain composure and lead effectively when stakes are highest. Essential for every leader.</p>
+          <div class="book-meta">
+            <div class="book-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(3,156)</span>
+            </div>
+            <div class="book-duration">
+              <i class="fas fa-clock"></i> 60 min
+            </div>
+          </div>
+          <div class="book-price-row">
+            <div class="book-price">
+              <span class="price-current">Ksh 1,500</span>
+              <span class="price-original">Ksh 3,000</span>
+            </div>
+            <button class="btn-buy" onclick="addToCart('The Champion\'s Mind', 1500, 'Leadership')">
+              <i class="fas fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="book-card fade-in">
+        <div class="book-badge bestseller">Bestseller</div>
+        <div class="book-image">
+          <div class="book-cover">
+            <div class="book-cover-icon"><i class="fas fa-seedling"></i></div>
+            <div class="book-cover-title">From Nothing</div>
+            <div class="book-cover-author">Sarah Njoroge</div>
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Entrepreneurship</span>
+          <h3 class="book-title">From Nothing: Building Empires from Scratch</h3>
+          <p class="book-description">An inspiring journey from zero to success. Learn the mindset shifts that turn limitations into launching pads.</p>
+          <div class="book-meta">
+            <div class="book-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(4,521)</span>
+            </div>
+            <div class="book-duration">
+              <i class="fas fa-clock"></i> 55 min
+            </div>
+          </div>
+          <div class="book-price-row">
+            <div class="book-price">
+              <span class="price-current">Ksh 1,350</span>
+              <span class="price-original">Ksh 2,700</span>
+            </div>
+            <button class="btn-buy" onclick="addToCart('From Nothing', 1350, 'Entrepreneurship')">
+              <i class="fas fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 5 -->
+      <div class="book-card fade-in">
+        <div class="book-image">
+          <div class="book-cover">
+            <div class="book-cover-icon"><i class="fas fa-heart"></i></div>
+            <div class="book-cover-title">Unbreakable</div>
+            <div class="book-cover-author">Dr. Amina Hassan</div>
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Resilience</span>
+          <h3 class="book-title">Unbreakable: Bouncing Back from Life's Hardest Hits</h3>
+          <p class="book-description">A deeply moving speech on resilience and recovery. Discover the science of post-traumatic growth and emotional strength.</p>
+          <div class="book-meta">
+            <div class="book-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(2,103)</span>
+            </div>
+            <div class="book-duration">
+              <i class="fas fa-clock"></i> 40 min
+            </div>
+          </div>
+          <div class="book-price-row">
+            <div class="book-price">
+              <span class="price-current">Ksh 1,000</span>
+              <span class="price-original">Ksh 2,000</span>
+            </div>
+            <button class="btn-buy" onclick="addToCart('Unbreakable', 1000, 'Resilience')">
+              <i class="fas fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 6 -->
+      <div class="book-card fade-in">
+        <div class="book-badge">Popular</div>
+        <div class="book-image">
+          <div class="book-cover">
+            <div class="book-cover-icon"><i class="fas fa-rocket"></i></div>
+            <div class="book-cover-title">Ignition</div>
+            <div class="book-cover-author">James Mwangi</div>
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Motivation</span>
+          <h3 class="book-title">Ignition: Sparking the Fire Within</h3>
+          <p class="book-description">The ultimate motivational boost for when you feel stuck. Reignite your passion and discover your true purpose in 35 minutes.</p>
+          <div class="book-meta">
+            <div class="book-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5,678)</span>
+            </div>
+            <div class="book-duration">
+              <i class="fas fa-clock"></i> 35 min
+            </div>
+          </div>
+          <div class="book-price-row">
+            <div class="book-price">
+              <span class="price-current">Ksh 850</span>
+              <span class="price-original">Ksh 1,700</span>
+            </div>
+            <button class="btn-buy" onclick="addToCart('Ignition', 850, 'Motivation')">
+              <i class="fas fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us" id="why-us">
+    <div class="section-header fade-in">
+      <span class="section-tag">Why Choose Us</span>
+      <h2>The Voice of Power Difference</h2>
+      <p>We don't just sell speeches. We deliver transformation you can feel from the first word to the last.</p>
     </div>
 
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-headphones-alt"></i></div>
+        <h3>Studio Quality Audio</h3>
+        <p>Every speech is professionally recorded in state-of-the-art studios with crystal-clear sound quality.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Listen Anywhere</h3>
+        <p>Download to any device. Offline access means your motivation travels with you, even without internet.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+        <h3>Lifetime Access</h3>
+        <p>Buy once, own forever. No subscriptions, no hidden fees. Your collection is yours for life.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Expert Curated</h3>
+        <p>Each speech is hand-selected and verified by our panel of psychology and performance experts.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+        <h3>Regular Updates</h3>
+        <p>New speeches added monthly. Your library grows automatically with the latest breakthrough content.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Money-Back Guarantee</h3>
+        <p>Not inspired? Get a full refund within 30 days. No questions asked. We stand by our quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-header fade-in">
+      <span class="section-tag">Testimonials</span>
+      <h2>Stories of Transformation</h2>
+      <p>Real people, real results. Hear how Voice of Power changed their lives.</p>
+    </div>
+
+    <div class="testimonials-slider">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The Summit Within literally changed my life. I was on the verge of giving up my business. After listening to Marcus Sterling's speech, I closed three major deals within two weeks. The mindset shift is real."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">KO</div>
+          <div class="author-info">
+            <h4>Kevin Ochieng</h4>
+            <p>Entrepreneur, Nairobi</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"As a university student struggling with confidence, 'Unbreakable' gave me the courage to apply for scholarships I never thought I could get. I won a full scholarship to study abroad. Thank you, Dr. Hassan!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">WM</div>
+          <div class="author-info">
+            <h4>Wanjiku Muthoni</h4>
+            <p>Student, Mombasa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="testimonial-text">"I play 'Rise & Grind' every single morning. It's become my ritual. My productivity has tripled and my team has noticed the difference. I've recommended Voice of Power to everyone in my network."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PK</div>
+          <div class="author-info">
+            <h4>Patrick Kimani</h4>
+            <p>Team Lead, Tech Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"After losing my job during the pandemic, 'From Nothing' gave me the push to start my own catering business. Two years later, I employ 12 people and serve corporate clients across Kenya."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AO</div>
+          <div class="author-info">
+            <h4>Akinyi Omondi</h4>
+            <p>Business Owner, Kisumu</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The Champion's Mind helped me prepare for my first marathon. I not only finished — I placed top 50 in the Nairobi Marathon. The mental techniques are applicable to any challenge in life."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DM</div>
+          <div class="author-info">
+            <h4>Daniel Mutua</h4>
+            <p>Athlete, Eldoret</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="section-header fade-in">
+      <span class="section-tag">Pricing Plans</span>
+      <h2>Choose Your Path to Greatness</h2>
+      <p>Flexible options designed for every stage of your journey. Invest in yourself today.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card fade-in">
+        <div class="pricing-icon"><i class="fas fa-headphones"></i></div>
+        <h3>Starter</h3>
+        <p class="subtitle">Perfect for beginners</p>
+        <div class="pricing-price">Ksh 500<span>/speech</span></div>
+        <ul class="pricing-features">
+          <li class="included"><i class="fas fa-check"></i> Single speech download</li>
+          <li class="included"><i class="fas fa-check"></i> MP3 format</li>
+          <li class="included"><i class="fas fa-check"></i> Mobile app access</li>
+          <li class="not-included"><i class="fas fa-times"></i> No bonus content</li>
+          <li class="not-included"><i class="fas fa-times"></i> No community access</li>
+        </ul>
+        <button class="btn-secondary" style="width: 100%; justify-content: center;" onclick="scrollToBooks()">
+          Get Started
+        </button>
+      </div>
+
+      <div class="pricing-card featured fade-in">
+        <div class="pricing-label">Most Popular</div>
+        <div class="pricing-icon"><i class="fas fa-crown"></i></div>
+        <h3>Power Pack</h3>
+        <p class="subtitle">Best value for growth</p>
+        <div class="pricing-price">Ksh 4,500<span>/month</span></div>
+        <ul class="pricing-features">
+          <li class="included"><i class="fas fa-check"></i> Unlimited speeches</li>
+          <li class="included"><i class="fas fa-check"></i> HD audio quality</li>
+          <li class="included"><i class="fas fa-check"></i> Transcripts included</li>
+          <li class="included"><i class="fas fa-check"></i> Bonus workshops</li>
+          <li class="not-included"><i class="fas fa-times"></i> 1-on-1 coaching</li>
+        </ul>
+        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="scrollToBooks()">
+          <i class="fas fa-bolt"></i> Unlock Power
+        </button>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="pricing-icon"><i class="fas fa-gem"></i></div>
+        <h3>Elite</h3>
+        <p class="subtitle">Total transformation</p>
+        <div class="pricing-price">Ksh 12,000<span>/year</span></div>
+        <ul class="pricing-features">
+          <li class="included"><i class="fas fa-check"></i> Everything in Power Pack</li>
+          <li class="included"><i class="fas fa-check"></i> 1-on-1 monthly coaching</li>
+          <li class="included"><i class="fas fa-check"></i> Exclusive live events</li>
+          <li class="included"><i class="fas fa-check"></i> Private community</li>
+          <li class="included"><i class="fas fa-check"></i> Priority support</li>
+        </ul>
+        <button class="btn-secondary" style="width: 100%; justify-content: center;" onclick="scrollToBooks()">
+          Go Elite
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-content fade-in">
+      <h2>Join 50,000+ Inspired Minds</h2>
+      <p>Get a free motivational speech delivered to your inbox every Monday morning. Start your week with power.</p>
+      <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-paper-plane"></i> Subscribe Free
+        </button>
+      </form>
+      <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.6;">
+        <i class="fas fa-lock" style="margin-right: 0.5rem;"></i> We respect your privacy. Unsubscribe anytime.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Voice of Power</h3>
+        <p>Transforming lives through the power of words. Since 2020, we've helped over 50,000 people unlock their potential through world-class motivational content.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="#">Personal Growth</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Entrepreneurship</a></li>
+          <li><a href="#">Resilience</a></li>
+          <li><a href="#">Productivity</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Speakers</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- PAYMENT MODAL - Place this right before </body> -->
+<div class="payment-modal-overlay" id="paymentModalOverlay">
+  <div class="payment-modal">
+    <button class="payment-modal-close" onclick="closePaymentModal()"><i class="fas fa-times"></i></button>
+    
+    <!-- Payment Method Selection -->
+    <div id="paymentMethodSelection">
+      <h3>Choose Payment Method</h3>
+      <p class="subtitle">Secure payment powered by industry-leading providers</p>
+      <div class="payment-amount" id="paymentAmount">Ksh 0</div>
+      
+      <div class="payment-methods">
+        <div class="payment-method" onclick="selectPaymentMethod('mpesa')">
+          <div class="payment-method-icon mpesa"><i class="fas fa-mobile-alt"></i></div>
+          <div class="payment-method-info">
+            <h4>M-Pesa</h4>
+            <p>Pay via STK Push to your phone</p>
+          </div>
+          <i class="fas fa-chevron-right" style="color: #888;"></i>
+        </div>
+        
+        <div class="payment-method" onclick="selectPaymentMethod('paystack')">
+          <div class="payment-method-icon paystack"><i class="fas fa-credit-card"></i></div>
+          <div class="payment-method-info">
+            <h4>Paystack</h4>
+            <p>Card, Bank Transfer, or M-Pesa</p>
+          </div>
+          <i class="fas fa-chevron-right" style="color: #888;"></i>
+        </div>
+      </div>
+
+      <!-- M-Pesa Phone Input -->
+      <div class="phone-input-group" id="mpesaPhoneInput">
+        <label>Enter your M-Pesa number</label>
+        <input type="tel" id="mpesaPhone" placeholder="e.g. 0712345678 or 254712345678" maxlength="13">
+        <button class="btn-pay-now" onclick="processMpesaPayment()">
+          <i class="fas fa-paper-plane"></i> Request STK Push
+        </button>
+      </div>
+    </div>
+
+    <!-- Payment Status -->
+    <div class="payment-status" id="paymentStatus">
+      <i class="fas fa-spinner fa-spin"></i>
+      <h4>Processing Payment...</h4>
+      <p>Please check your phone and enter your M-Pesa PIN</p>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download-section" id="downloadSection">
+      <i class="fas fa-check-circle"></i>
+      <h4>Payment Successful!</h4>
+      <p>Your motivational speeches are ready for download</p>
+      <a href="#" class="download-btn" onclick="downloadFiles()">
+        <i class="fas fa-download"></i> Download Now
+      </a>
+    </div>
   </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Voice of Power. All Rights Reserved. | Crafted with <i class="fas fa-heart" style="color: #c0392b;"></i> in Kenya</p>
+    </div>
+  </footer>
 
-  <!-- SOCIALS -->
-  <div class="socials">
-    <p>Follow me:</p>
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <a href="https://web.facebook.com/">Facebook</a>
+  <script>
+// ===== CONFIGURATION - REPLACE WITH YOUR REAL KEYS =====
+const PAYSTACK_PUBLIC_KEY = 'pk_test_your_paystack_public_key_here'; // Get from paystack.co
+const BACKEND_URL = 'https://your-backend-server.com'; // Your server for M-Pesa STK push
 
-    <a href="https://www.instagram.com/vxl.phii/">
-      Instagram
-    </a>
-  </div>
+// ===== CART =====
+let cart = [];
 
-</section>
+// ===== LOADER =====
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, 1500);
+});
 
-<!-- 🔚 FOOTER -->
-<footer class="footer">
-  <p>&copy; 2025 MyFashion. All Rights Reserved.</p>
-</footer>
+// ===== PARTICLES =====
+const particlesContainer = document.getElementById('particles');
+if (particlesContainer) {
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 15 + 's';
+    particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+    particlesContainer.appendChild(particle);
+  }
+}
 
-<script>
+// ===== NAVBAR SCROLL =====
+const header = document.getElementById('header');
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+}
 
-// COUNTDOWN
-const targetDate = new Date("June 20, 2026 12:00:00").getTime();
+// ===== MOBILE MENU =====
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
 
-function updateCountdown(){
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mainNav.classList.toggle('active');
+  });
 
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+  document.querySelectorAll('#mainNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      mainNav.classList.remove('active');
+    });
+  });
+}
 
-  if(distance <= 0){
-    document.getElementById("countdown").innerHTML =
-      "Collection Launched!";
-    clearInterval(timer);
+// ===== ACTIVE NAV LINK =====
+const sections = document.querySelectorAll('section[id]');
+if (sections.length > 0) {
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    document.querySelectorAll('#mainNav a[href^="#"]').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
+// ===== SCROLL ANIMATIONS =====
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ===== BACK TO TOP =====
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===== CART FUNCTIONS =====
+function toggleCart() {
+  const overlay = document.getElementById('cartOverlay');
+  const sidebar = document.getElementById('cartSidebar');
+  if (overlay && sidebar) {
+    overlay.classList.toggle('active');
+    sidebar.classList.toggle('active');
+    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+  }
+}
+
+function addToCart(title, price, category) {
+  const existingItem = cart.find(item => item.title === title);
+  if (existingItem) {
+    alert('This item is already in your cart!');
+    return;
+  }
+  cart.push({ title, price, category });
+  updateCartUI();
+  toggleCart();
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartUI();
+}
+
+function updateCartUI() {
+  const cartItems = document.getElementById('cartItems');
+  const cartCount = document.getElementById('cartCount');
+  const cartTotal = document.getElementById('cartTotal');
+  const subtotalEl = document.getElementById('subtotal');
+  const totalPriceEl = document.getElementById('totalPrice');
+
+  if (!cartItems) return;
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = `
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+      </div>
+    `;
+    if (cartCount) cartCount.style.display = 'none';
+    if (cartTotal) cartTotal.style.display = 'none';
     return;
   }
 
-  const days = Math.floor(
-    distance / (1000 * 60 * 60 * 24)
-  );
+  if (cartCount) {
+    cartCount.style.display = 'flex';
+    cartCount.textContent = cart.length;
+  }
 
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) /
-    (1000 * 60 * 60)
-  );
+  let total = 0;
+  cartItems.innerHTML = cart.map((item, index) => {
+    total += item.price;
+    return `
+      <div class="cart-item">
+        <div class="cart-item-image"><i class="fas fa-microphone-alt"></i></div>
+        <div class="cart-item-info">
+          <h4>${item.title}</h4>
+          <p>${item.category}</p>
+          <div class="cart-item-price">Ksh ${item.price.toLocaleString()}</div>
+        </div>
+        <button class="cart-item-remove" onclick="removeFromCart(${index})">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+    `;
+  }).join('');
 
-  const minutes = Math.floor(
-    (distance % (1000 * 60 * 60)) /
-    (1000 * 60)
-  );
-
-  const seconds = Math.floor(
-    (distance % (1000 * 60)) / 1000
-  );
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
+  if (cartTotal) cartTotal.style.display = 'block';
+  if (subtotalEl) subtotalEl.textContent = 'Ksh ' + total.toLocaleString();
+  if (totalPriceEl) totalPriceEl.textContent = 'Ksh ' + total.toLocaleString();
 }
 
-const timer = setInterval(updateCountdown, 1000);
-updateCountdown();
+// ===== PAYMENT MODAL =====
+function openPaymentModal() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
 
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const paymentAmount = document.getElementById('paymentAmount');
+  if (paymentAmount) paymentAmount.textContent = 'Ksh ' + total.toLocaleString();
 
-// LIVE CLOCK
-function updateClock(){
+  // Reset modal state
+  document.getElementById('paymentMethodSelection').style.display = 'block';
+  document.getElementById('mpesaPhoneInput').classList.remove('active');
+  document.getElementById('paymentStatus').classList.remove('active');
+  document.getElementById('downloadSection').classList.remove('active');
 
-  const now = new Date();
-
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
-
-  hours = String(hours).padStart(2, "0");
-  minutes = String(minutes).padStart(2, "0");
-  seconds = String(seconds).padStart(2, "0");
-
-  document.getElementById("clock").textContent =
-    `${hours}:${minutes}:${seconds}`;
-
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  };
-
-  document.getElementById("date").textContent =
-    now.toLocaleDateString("en-US", options);
+  const overlay = document.getElementById('paymentModalOverlay');
+  if (overlay) overlay.classList.add('active');
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+function closePaymentModal() {
+  const overlay = document.getElementById('paymentModalOverlay');
+  if (overlay) overlay.classList.remove('active');
+}
 
-</script>
-</script>
+function selectPaymentMethod(method) {
+  if (method === 'mpesa') {
+    document.getElementById('mpesaPhoneInput').classList.add('active');
+  } else if (method === 'paystack') {
+    // Hide phone input and trigger Paystack immediately
+    document.getElementById('mpesaPhoneInput').classList.remove('active');
+    processPaystackPayment();
+  }
+}
 
+// ===== PAYSTACK PAYMENT =====
+function processPaystackPayment() {
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const email = 'customer@example.com'; // You should collect this from user
+
+  // Hide method selection, show processing
+  document.getElementById('paymentMethodSelection').style.display = 'none';
+  document.getElementById('paymentStatus').classList.add('active');
+
+  const handler = PaystackPop.setup({
+    key: PAYSTACK_PUBLIC_KEY,
+    email: email,
+    amount: total * 100, // Paystack uses kobo (100 kobo = 1 Ksh)
+    currency: 'KES',
+    ref: 'VOP_' + Math.floor(Math.random() * 1000000000),
+    callback: function(response) {
+      // Payment successful
+      document.getElementById('paymentStatus').classList.remove('active');
+      document.getElementById('downloadSection').classList.add('active');
+      
+      // Verify payment on your backend
+      verifyPayment(response.reference);
+    },
+    onClose: function() {
+      // User closed popup
+      document.getElementById('paymentStatus').classList.remove('active');
+      document.getElementById('paymentMethodSelection').style.display = 'block';
+      alert('Payment was not completed. You can try again.');
+    }
+  });
+
+  handler.openIframe();
+}
+
+// ===== M-PESA STK PUSH (Requires Backend) =====
+async function processMpesaPayment() {
+  const phoneInput = document.getElementById('mpesaPhone');
+  const phone = phoneInput ? phoneInput.value.trim() : '';
+
+  if (!phone) {
+    alert('Please enter your M-Pesa phone number');
+    return;
+  }
+
+  // Format phone number
+  let formattedPhone = phone;
+  if (phone.startsWith('0')) {
+    formattedPhone = '254' + phone.substring(1);
+  } else if (!phone.startsWith('254')) {
+    formattedPhone = '254' + phone;
+  }
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  // Hide method selection, show processing
+  document.getElementById('paymentMethodSelection').style.display = 'none';
+  document.getElementById('paymentStatus').classList.add('active');
+
+  try {
+    // Send request to your backend
+    const response = await fetch(BACKEND_URL + '/api/mpesa/stkpush', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        phone: formattedPhone,
+        amount: total,
+        accountReference: 'VoiceOfPower',
+        transactionDesc: 'Motivational Speeches'
+      })
+    });
+
+    const data = await response.json();
+
+    if (data.ResponseCode === '0') {
+      // STK push sent successfully
+      // Poll for payment status
+      pollPaymentStatus(data.CheckoutRequestID);
+    } else {
+      throw new Error(data.errorMessage || 'Failed to initiate payment');
+    }
+  } catch (error) {
+    console.error('M-Pesa error:', error);
+    document.getElementById('paymentStatus').classList.remove('active');
+    document.getElementById('paymentMethodSelection').style.display = 'block';
+    alert('Failed to initiate M-Pesa payment. Please try again or use Paystack.');
+  }
+}
+
+// Poll for M-Pesa payment status
+async function pollPaymentStatus(checkoutRequestID) {
+  const maxAttempts = 30;
+  let attempts = 0;
+
+  const interval = setInterval(async () => {
+    attempts++;
+    
+    try {
+      const response = await fetch(BACKEND_URL + '/api/mpesa/status/' + checkoutRequestID);
+      const data = await response.json();
+
+      if (data.ResultCode === '0') {
+        // Payment successful
+        clearInterval(interval);
+        document.getElementById('paymentStatus').classList.remove('active');
+        document.getElementById('downloadSection').classList.add('active');
+      } else if (data.ResultCode && data.ResultCode !== '0') {
+        // Payment failed
+        clearInterval(interval);
+        document.getElementById('paymentStatus').classList.remove('active');
+        document.getElementById('paymentMethodSelection').style.display = 'block';
+        alert('Payment failed: ' + data.ResultDesc);
+      } else if (attempts >= maxAttempts) {
+        // Timeout
+        clearInterval(interval);
+        document.getElementById('paymentStatus').classList.remove('active');
+        document.getElementById('paymentMethodSelection').style.display = 'block';
+        alert('Payment verification timed out. Please check your M-Pesa messages and contact support if charged.');
+      }
+    } catch (error) {
+      console.error('Polling error:', error);
+    }
+  }, 5000); // Check every 5 seconds
+}
+
+// ===== VERIFY PAYMENT (Backend Required) =====
+async function verifyPayment(reference) {
+  try {
+    const response = await fetch(BACKEND_URL + '/api/verify-payment/' + reference);
+    const data = await response.json();
+    
+    if (data.status === 'success') {
+      console.log('Payment verified:', data);
+      // Grant access to downloads
+    }
+  } catch (error) {
+    console.error('Verification error:', error);
+  }
+}
+
+// ===== DOWNLOAD FILES =====
+function downloadFiles() {
+  // Generate download links for purchased items
+  const downloads = cart.map(item => {
+    // Replace with your actual file URLs
+    return {
+      title: item.title,
+      url: `/downloads/${item.title.toLowerCase().replace(/\s+/g, '-')}.mp3`
+    };
+  });
+
+  // In a real implementation, these would be secure, time-limited URLs
+  downloads.forEach(file => {
+    // Create temporary download link
+    const a = document.createElement('a');
+    a.href = file.url;
+    a.download = file.title + '.mp3';
+    a.click();
+  });
+
+  alert('Your downloads have started! Check your downloads folder.');
+  
+  // Clear cart after successful download
+  cart = [];
+  updateCartUI();
+  closePaymentModal();
+}
+
+// ===== NEWSLETTER =====
+function handleSubscribe(e) {
+  if (e) e.preventDefault();
+  const emailInput = e ? e.target.querySelector('input') : null;
+  const email = emailInput ? emailInput.value : '';
+  
+  if (email) {
+    alert('Welcome to the Voice of Power community! A free motivational speech has been sent to ' + email);
+    if (emailInput) emailInput.value = '';
+  }
+}
+
+// ===== SCROLL TO BOOKS =====
+function scrollToBooks() {
+  const booksSection = document.getElementById('books');
+  if (booksSection) booksSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== DYNAMIC YEAR =====
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</div>
 </body>
 </html>
