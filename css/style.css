@@ -1577,24 +1577,20 @@
     font-size: 0.9rem;
   }
 }
-
 @media (max-width: 480px) {
   .newsletter-badge {
     font-size: 0.7rem;
     padding: 0.4rem 1rem;
-  }
-  
+  } 
   .newsletter-form input {
     padding: 0.9rem 1.2rem 0.9rem 2.8rem;
     font-size: 0.9rem;
-  }
-  
+  } 
   .input-icon {
     left: 1rem;
     font-size: 1rem;
   }
 }
-
     /* ===== FOOTER ===== */
     footer {
       background: var(--darker);
