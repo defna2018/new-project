@@ -1,0 +1,852 @@
+
+# Create About Us page
+about_us_html = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Voice of Power</title>
+  <meta name="description" content="Learn about Voice of Power - our mission, story, and the team behind transformative motivational speeches.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header id="header">
+    <a href="index.html" class="brand">
+      <div class="brand-icon"><i class="fas fa-microphone-alt"></i></div>
+      <div>
+        <div class="brand-text">Voice of Power</div>
+        <div class="brand-tagline">Motivational Speeches</div>
+      </div>
+    </a>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="mainNav">
+      <a href="/index.html">Home</a>
+      <a href="/index.html#books">Collection</a>
+      <a href="/index.html#why-us">Why Us</a>
+      <a href="/index.html#pricing">Pricing</a>
+      <a href="/index.html#testimonials">Reviews</a>
+      <a href="/index.html#books" class="nav-cta">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="story-grid">
+      <div class="story-image fade-in">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="Team collaboration">
+      </div>
+      <div class="story-content fade-in">
+        <span class="section-tag">Our Story</span>
+        <h2>From a Single Idea to 50,000+ Transformed Lives</h2>
+        <p>Voice of Power began in 2020 when our founder, Righan Okello, realized that access to world-class motivational content was limited to those who could afford expensive seminars and coaching programs.</p>
+        <p>What started as a small collection of recorded speeches shared among friends quickly grew into a movement. Today, we curate and deliver powerful motivational speeches from the world's most influential voices directly to your device.</p>
+        <p>Our mission is simple: make transformational content accessible to everyone, everywhere, at any time.</p>
+        <div class="story-stats">
+          <div class="story-stat">
+            <h3>50K+</h3>
+            <p>Lives Transformed</p>
+          </div>
+          <div class="story-stat">
+            <h3>250+</h3>
+            <p>Speeches Curated</p>
+          </div>
+          <div class="story-stat">
+            <h3>45+</h3>
+            <p>World Speakers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <div class="mission-container">
+      <span class="section-tag fade-in">Our Mission</span>
+      <h2 class="fade-in">Why We Do What We Do</h2>
+      <p class="fade-in">We believe everyone deserves access to the wisdom and inspiration that can unlock their full potential. Our values guide every decision we make.</p>
+      
+      <div class="values-grid">
+        <div class="value-card fade-in">
+          <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Purpose-Driven</h3>
+          <p>Every speech we curate serves a clear purpose — to ignite change, spark action, and fuel growth in our listeners' lives.</p>
+        </div>
+        <div class="value-card fade-in">
+          <div class="value-icon"><i class="fas fa-users"></i></div>
+          <h3>Community First</h3>
+          <p>We put our community at the center. Their feedback, stories, and transformations shape the content we create and share.</p>
+        </div>
+        <div class="value-card fade-in">
+          <div class="value-icon"><i class="fas fa-gem"></i></div>
+          <h3>Uncompromising Quality</h3>
+          <p>Studio-quality audio, expert curation, and verified speakers. We never compromise on the excellence our audience deserves.</p>
+        </div>
+        <div class="value-card fade-in">
+          <div class="value-icon"><i class="fas fa-globe-africa"></i></div>
+          <h3>Accessible to All</h3>
+          <p>Premium motivation shouldn't have a premium price tag. We make world-class content affordable for everyone in Kenya and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="section-header fade-in">
+      <span class="section-tag">The Team</span>
+      <h2>Meet the People Behind the Power</h2>
+    </div>
+    
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-avatar">RO</div>
+        <h3>Righan Okello</h3>
+        <p class="team-role">Founder & CEO</p>
+        <p class="team-bio">Former corporate trainer turned entrepreneur. Righan founded Voice of Power with a vision to democratize access to motivational content across Africa.</p>
+        <div class="team-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="team-card fade-in">
+        <div class="team-avatar">SN</div>
+        <h3>Sarah Njoroge</h3>
+        <p class="team-role">Head of Content</p>
+        <p class="team-bio">Award-winning speaker and content strategist. Sarah leads our curation team, ensuring every speech meets our gold standard of excellence.</p>
+        <div class="team-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="team-card fade-in">
+        <div class="team-avatar">JM</div>
+        <h3>James Mwangi</h3>
+        <p class="team-role">Lead Audio Engineer</p>
+        <p class="team-bio">With 10+ years in professional audio, James ensures every speech sounds crisp, clear, and immersive — like the speaker is right beside you.</p>
+        <div class="team-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="team-card fade-in">
+        <div class="team-avatar">AH</div>
+        <h3>Dr. Brandy Amondi</h3>
+        <p class="team-role">Chief Psychologist</p>
+        <p class="team-bio">Clinical psychologist and resilience researcher. Amina verifies the psychological impact and scientific validity of our content.</p>
+        <div class="team-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2 class="fade-in">Ready to Start Your Journey?</h2>
+    <p class="fade-in">Join 50,000+ people who have already transformed their lives with Voice of Power.</p>
+    <a href="index.html#books" class="btn-primary fade-in">
+      <i class="fas fa-play-circle"></i> Explore Collection
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Voice of Power</h3>
+        <p>Transforming lives through the power of words. Since 2020, we've helped over 50,000 people unlock their potential through world-class motivational content.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="/index.html#books">Personal Growth</a></li>
+          <li><a href="/index.html#books">Leadership</a></li>
+          <li><a href="/index.html#books">Entrepreneurship</a></li>
+          <li><a href="/index.html#books">Resilience</a></li>
+          <li><a href="/index.html#books">Productivity</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="our-speakers.html">Our Speakers</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="press-kit.html">Press Kit</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Voice of Power. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+      });
+    }
+    
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Navbar scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(5,5,8,0.98)';
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+      } else {
+        header.style.background = 'rgba(5,5,8,0.9)';
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>'''
+
+ <style>
+    :root {
+      --gold: #c9a96e;
+      --gold-light: #e8d5a3;
+      --gold-dark: #a08050;
+      --dark: #0a0a0f;
+      --darker: #050508;
+      --card-bg: rgba(255,255,255,0.03);
+      --card-border: rgba(255,255,255,0.08);
+      --text: #e8e8e8;
+      --text-muted: #888;
+      --accent-red: #c0392b;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--darker);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(5,5,8,0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+      transition: all 0.3s ease;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+    
+    .brand-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--darker);
+    }
+    
+    .brand-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+    
+    .brand-tagline {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    nav { display: flex; align-items: center; gap: 2rem; }
+    
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    nav a:hover, nav a.active { color: var(--gold); }
+    
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 1px;
+    }
+    
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--darker) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+    
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    
+    .menu-toggle span {
+      width: 25px; height: 2px;
+      background: var(--gold);
+      transition: all 0.3s;
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 5% 4rem;
+      position: relative;
+      background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 60%);
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.2);
+      color: var(--gold);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .hero h1 span {
+      display: block;
+      font-size: 0.55em;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+    
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    
+    /* Story Section */
+    .story-section {
+      padding: 5rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .story-image {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    
+    .story-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(192,57,43,0.1));
+      z-index: 1;
+    }
+    
+    .story-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    
+    .story-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    
+    .story-content p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    
+    .story-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--card-border);
+    }
+    
+    .story-stat h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+    }
+    
+    .story-stat p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    
+    /* Mission Section */
+    .mission-section {
+      padding: 5rem 5%;
+      background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+      position: relative;
+    }
+    
+    .mission-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    
+    .mission-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .section-tag {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    
+    .mission-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    
+    .mission-container > p {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      color: var(--text-muted);
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+    
+    .value-card:hover {
+      border-color: rgba(212,175,55,0.3);
+      transform: translateY(-5px);
+    }
+    
+    .value-icon {
+      width: 50px; height: 50px;
+      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    
+    .value-card h3 {
+      font-size: 1.2rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    
+    .value-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    /* Team Section */
+    .team-section {
+      padding: 5rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .team-section .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .team-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--text);
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    
+    .team-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .team-card:hover {
+      border-color: rgba(212,175,55,0.3);
+      transform: translateY(-8px);
+    }
+    
+    .team-avatar {
+      width: 100px; height: 100px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 50%;
+      margin: 2rem auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--darker);
+    }
+    
+    .team-card h3 {
+      color: var(--text);
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .team-role {
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .team-bio {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 0 1.5rem 2rem;
+      line-height: 1.6;
+    }
+    
+    .team-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding-bottom: 2rem;
+    }
+    
+    .team-social a {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .team-social a:hover {
+      background: var(--gold);
+      color: var(--darker);
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 5rem 5%;
+      text-align: center;
+      background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+      position: relative;
+    }
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+    }
+    
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--darker);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+    }
+    
+    /* Footer */
+    footer {
+      padding: 4rem 5% 2rem;
+      border-top: 1px solid var(--card-border);
+      background: var(--darker);
+    }
+    
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+    
+    .footer-brand h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .footer-social a {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .footer-social a:hover {
+      background: var(--gold);
+      color: var(--darker);
+    }
+    
+    .footer-links h4 {
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    .footer-links ul { list-style: none; }
+    
+    .footer-links li { margin-bottom: 0.6rem; }
+    
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover { color: var(--gold); }
+    
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--card-border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle { display: flex; }
+      nav {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: var(--darker);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.3s;
+        border-left: 1px solid var(--card-border);
+      }
+      nav.active { right: 0; }
+      .story-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .story-stats { grid-template-columns: 1fr; text-align: center; }
+    }
+    
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    .fade-in:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in:nth-child(3) { animation-delay: 0.3s; }
+    .fade-in:nth-child(4) { animation-delay: 0.4s; }
+  </style>
