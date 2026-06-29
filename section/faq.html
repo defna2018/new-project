@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | Voice of Power</title>
+  <meta name="description" content="Frequently asked questions about Voice of Power. Find answers about purchases, downloads, accounts, subscriptions, and more.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+<body>
+
+  <header id="header">
+    <a href="index.html" class="brand">
+      <div class="brand-icon"><i class="fas fa-microphone-alt"></i></div>
+      <div>
+        <div class="brand-text">Voice of Power</div>
+        <div class="brand-tagline">Motivational Speeches</div>
+      </div>
+    </a>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="mainNav">
+      <a href="/index.html">Home</a>
+      <a href="/index.html#books">Collection</a>
+      <a href="/index.html#why-us">Why Us</a>
+      <a href="/index.html#pricing">Pricing</a>
+      <a href="/index.html#testimonials">Reviews</a>
+      <a href="/index.html#books" class="nav-cta">Get Started</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Frequently Asked Questions<span>Quick Answers to Common Questions</span></h1>
+</section>  
+  <!-- FAQ Tabs -->
+  <div class="faq-tabs fade-in">
+    <button class="faq-tab active" onclick="showCategory('general')">General</button>
+    <button class="faq-tab" onclick="showCategory('payments')">Payments</button>
+    <button class="faq-tab" onclick="showCategory('downloads')">Downloads</button>
+    <button class="faq-tab" onclick="showCategory('subscriptions')">Subscriptions</button>
+    <button class="faq-tab" onclick="showCategory('technical')">Technical</button>
+  </div>
+
+  <!-- FAQ Content -->
+  <section class="faq-section">
+    <!-- General -->
+    <div class="faq-category active" id="general">
+      <div class="faq-item active">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is Voice of Power?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Voice of Power is Africa's premier platform for motivational speeches and inspirational content. We curate world-class speeches from legendary speakers, making them accessible to anyone seeking transformation, growth, and motivation. Since 2020, we've helped over 50,000 people across 12 countries unlock their potential.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Who are the speakers on Voice of Power?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Our speakers include world-renowned motivational speakers, psychologists, entrepreneurs, athletes, and thought leaders from across the globe. Each speaker is carefully vetted by our panel of experts to ensure authenticity, impact, and the ability to create real change. We feature voices from Africa, the US, the UK, and beyond.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How long are the speeches?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Speech lengths vary to fit your schedule. Most range from 20 to 60 minutes, with some shorter "power boost" speeches under 15 minutes and deep-dive sessions extending to 90 minutes. Each speech listing clearly shows its duration so you can plan accordingly.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I listen to a preview before buying?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! Every speech includes a free 2-minute preview so you can get a feel for the speaker's style and energy before making a purchase. We also offer a curated selection of completely free speeches for new users to explore the platform.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is Voice of Power available in my country?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Voice of Power is available globally. Our primary audience is in Africa (Kenya, Nigeria, South Africa, Ghana, Uganda, Tanzania, and more), but users from the US, UK, Europe, and Asia also enjoy our content. All you need is an internet connection to get started.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payments -->
+    <div class="faq-category" id="payments">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What payment methods do you accept?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We accept multiple payment methods to ensure accessibility:</p>
+          <ul>
+            <li><strong>M-Pesa</strong> — STK Push directly to your phone</li>
+            <li><strong>Credit/Debit Cards</strong> — Visa, Mastercard via Paystack</li>
+            <li><strong>Bank Transfer</strong> — Direct bank deposits</li>
+            <li><strong>Mobile Money</strong> — Airtel Money, Tigo Pesa, and more via Paystack</li>
+          </ul>
+          <p>All transactions are processed through Paystack, a PCI-DSS compliant provider trusted by thousands of businesses worldwide.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is my payment information secure?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. We use bank-level SSL encryption for all transactions. We never store your full card details on our servers — all payment processing is handled securely by Paystack. Your financial information is protected by the same standards used by major banks and e-commerce platforms.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Will I receive a receipt or invoice?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. A detailed receipt is automatically sent to your email immediately after purchase. For business or corporate purchases, you can request a formal invoice by contacting our support team at <a href="mailto:support@voiceofpower.co">support@voiceofpower.co</a>.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I pay in my local currency?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Currently, all prices are displayed in Kenyan Shillings (Ksh). However, Paystack automatically handles currency conversion for international cards. We plan to support multi-currency display in the near future to make pricing even clearer for our global audience.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What happens if my payment fails?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>If your payment fails, don't worry — no money will be deducted from your account. You'll see an error message explaining what went wrong. Common causes include insufficient funds, network issues, or incorrect card details. You can retry the payment immediately or try a different payment method.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Downloads -->
+    <div class="faq-category" id="downloads">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How do I download my purchased speeches?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>After completing your purchase:</p>
+          <ul>
+            <li>Go to "My Library" in your account dashboard</li>
+            <li>Find the speech you want to download</li>
+            <li>Click the download icon (downward arrow)</li>
+            <li>The MP3 file will save to your device's default download folder</li>
+          </ul>
+          <p>You can also access download links from the confirmation email sent after purchase.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What file format are the speeches in?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>All speeches are delivered in high-quality MP3 format (320kbps), ensuring crystal-clear audio on any device. MP3 is universally compatible with smartphones, tablets, laptops, car stereos, and virtually all audio players. We also provide transcripts in PDF format for Power Pack and Elite subscribers.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I listen offline?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! Once you download a speech, you can listen offline anywhere — on a plane, in the gym, during your commute, or anywhere without internet. Offline listening is available on all paid plans. Simply download the speeches you want while connected to Wi-Fi, and they'll be available whenever you need them.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How many times can I download a speech?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Unlimited times. Once you purchase a speech, you can download it as many times as you need. This is helpful if you switch devices, accidentally delete a file, or want to keep backups. Your purchases are permanently tied to your account.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I share downloaded files with friends?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Downloaded files are for your personal use only. Sharing files violates our Terms of Service and copyright agreements with our speakers. However, you can easily gift speeches to friends and family through our gifting feature at checkout, which gives them their own licensed copy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscriptions -->
+    <div class="faq-category" id="subscriptions">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What's the difference between Starter, Power Pack, and Elite?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p><strong>Starter (Ksh 500/speech):</strong> Buy individual speeches one at a time. Perfect for trying out specific content.</p>
+          <p><strong>Power Pack (Ksh 4,500/month):</strong> Unlimited access to our entire library, HD audio, transcripts, and bonus workshops. Best value for regular listeners.</p>
+          <p><strong>Elite (Ksh 12,000/year):</strong> Everything in Power Pack plus monthly 1-on-1 coaching, exclusive live events, private community access, and priority support. For total transformation.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I cancel my subscription anytime?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, you can cancel your subscription at any time with no penalties. Go to Account Settings > Subscription and click "Cancel." Your access will continue until the end of your current billing period. After cancellation, any individually purchased speeches remain in your library permanently.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What happens to my downloads if I cancel?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Any speeches you purchased individually are yours forever, even after cancellation. However, speeches accessed through a subscription plan will no longer be available for new downloads once your subscription ends. We recommend downloading your favorites before canceling if you're on a subscription plan.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I switch between plans?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Upgrades take effect immediately, and you'll be charged the prorated difference. Downgrades take effect at the end of your current billing cycle.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you offer family or group plans?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We offer corporate and group licenses for teams, schools, and organizations. These include bulk pricing, team analytics, and custom content curation. Contact our partnerships team at <a href="mailto:partners@voiceofpower.co">partners@voiceofpower.co</a> for a custom quote tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical -->
+    <div class="faq-category" id="technical">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What devices and browsers are supported?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Voice of Power works on all modern web browsers including Chrome, Safari, Firefox, Edge, and Opera. We also have dedicated mobile apps for iOS (iPhone/iPad) and Android. For the best experience, we recommend keeping your browser and operating system up to date.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Why is my download slow or failing?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Slow downloads are usually caused by unstable internet connections. Try these steps:</p>
+          <ul>
+            <li>Switch to a stable Wi-Fi connection</li>
+            <li>Pause other downloads or streaming activities</li>
+            <li>Clear your browser cache and try again</li>
+            <li>Use the mobile app for more reliable downloads</li>
+          </ul>
+          <p>If problems persist, contact our support team and we'll send you an alternative download link.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How do I update my account password?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>To update your password:</p>
+          <ul>
+            <li>Log into your account and go to Account Settings > Security</li>
+            <li>Click "Change Password"</li>
+            <li>Enter your current password, then your new password twice</li>
+            <li>Click "Save Changes"</li>
+          </ul>
+          <p>If you forgot your password, click "Forgot Password" on the login page and follow the reset instructions sent to your email.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>The audio is skipping or cutting out. What should I do?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Audio issues are typically caused by network instability or browser conflicts. Try these solutions:</p>
+          <ul>
+            <li>Download the speech for offline playback</li>
+            <li>Close other browser tabs and applications</li>
+            <li>Try a different browser</li>
+            <li>Update your audio drivers</li>
+            <li>Restart your device</li>
+          </ul>
+          <p>If the issue continues across multiple speeches, please contact support with details about your device and browser.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How do I report a bug or technical issue?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We appreciate your help in making Voice of Power better! To report a bug:</p>
+          <ul>
+            <li>Email us at <a href="mailto:support@voiceofpower.co">support@voiceofpower.co</a></li>
+            <li>Include your device type, browser/app version, and a description of the issue</li>
+            <li>If possible, attach screenshots or screen recordings</li>
+          </ul>
+          <p>Our technical team typically responds within 24 hours and prioritizes critical issues affecting multiple users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Need Help -->
+  <section class="help-cta">
+    <div class="section-header fade-in">
+      <span class="section-tag">Still Have Questions?</span>
+      <h2>We're Here to Help</h2>
+      <p>Our friendly support team is available to assist you with any questions or concerns.</p>
+    </div>
+    <a href="contact.html" class="btn-primary fade-in"><i class="fas fa-envelope"></i> Contact Support</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Voice of Power</h3>
+        <p>Transforming lives through the power of words. Since 2020, we've helped over 50,000 people unlock their potential through world-class motivational content.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="/index.html#books">Personal Growth</a></li>
+          <li><a href="/index.html#books">Leadership</a></li>
+          <li><a href="/index.html#books">Entrepreneurship</a></li>
+          <li><a href="/index.html#books">Resilience</a></li>
+          <li><a href="/index.html#books">Productivity</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/section/about.html">About Us</a></li>
+          <li><a href="/section/speakers.html">Our Speakers</a></li>
+          <li><a href="/section/presskit.html">Press Kit</a></li>
+          <li><a href="/section/contact.html  ">Contact</a></li>
+         <li><a href="/section/careers.html  ">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="/section/refund.html">Refund Policy</a></li>
+          <li><a href="/section/terms.html">Terms of Service</a></li>
+          <li><a href="/section/privacy.html">Privacy Policy</a></li>
+         <li><a href="/section/help.html">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Voice of Power. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mainNav.classList.toggle('active');
+    });
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+      });
+    });
+
+    // Fade in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // FAQ Tabs
+    function showCategory(category) {
+      document.querySelectorAll('.faq-category').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.faq-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(category).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    // FAQ Toggle
+    function toggleFaq(element) {
+      const item = element.parentElement;
+      const isActive = item.classList.contains('active');
+      // Close all in same category
+      const category = item.closest('.faq-category');
+      category.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+ <style>
+    :root {
+       --gold: #c9a96e;
+      --gold-light: #e8d5a3;
+      --gold-dark: #a08050;
+      --dark: #0a0a0a;
+      --dark-light: #111111;
+      --dark-lighter: #1a1a1a;
+      --dark-card: #141414;
+      --text: #e8e8e8;
+      --text-muted: #888888;
+      --text-dim: #555555;
+      --accent-red: #c0392b;
+      --border: rgba(212, 175, 55, 0.15);
+      --border-hover: rgba(212, 175, 55, 0.3);
+      --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-dark) 100%);
+      --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+      --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    ::selection { background: rgba(212, 175, 55, 0.3); color: var(--gold-light); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+    /* Navbar */
+    header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      padding: 1rem 5%; display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.4s ease;
+    }
+    header.scrolled {
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 5%;
+    }
+    .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .brand-icon {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: var(--gradient-gold); display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--dark); box-shadow: var(--shadow-gold);
+    }
+    .brand-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--text); }
+    .brand-tagline { font-size: 0.65rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 2rem; }
+    nav a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.5px; position: relative; transition: color 0.3s ease; padding: 0.5rem 0;
+    }
+    nav a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+      background: var(--gradient-gold); transition: width 0.3s ease; border-radius: 1px;
+    }
+    nav a:hover, nav a.active { color: var(--gold); }
+    nav a:hover::after, nav a.active::after { width: 100%; }
+    .nav-cta {
+      background: var(--gradient-gold); color: var(--dark) !important; padding: 0.6rem 1.5rem !important;
+      border-radius: 50px; font-weight: 600; transition: all 0.3s ease; box-shadow: var(--shadow-gold);
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3); }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+    .menu-toggle span { width: 25px; height: 2px; background: var(--gold); transition: all 0.3s ease; }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* Hero */
+    .hero {
+      min-height: 50vh; display: flex; align-items: center; justify-content: center;
+      position: relative; padding: 8rem 5% 3rem; text-align: center;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(212, 175, 55, 0.1); border: 1px solid var(--border);
+      color: var(--gold); padding: 0.5rem 1.2rem; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 500; margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif; font-size: clamp(2.0rem, 5vw, 3.0rem);
+      font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;
+    }
+    .hero h1 span { display: block; color: var(--gold); font-size: 0.6em; font-weight: 400; margin-top: 0.5rem; }
+    .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8; }
+
+    /* Section Header */
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-tag {
+      display: inline-block; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--border);
+      color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem;
+      font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; margin-bottom: 1rem;
+    }
+    .section-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
+
+    /* FAQ Tabs */
+    .faq-tabs { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3rem; padding: 0 5%; }
+    .faq-tab {
+      background: var(--dark-card); border: 1px solid var(--border); border-radius: 50px;
+      padding: 0.7rem 1.5rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;
+      cursor: pointer; transition: all 0.3s ease; border: none; font-family: 'Inter', sans-serif;
+    }
+    .faq-tab:hover { border-color: var(--border-hover); color: var(--text); }
+    .faq-tab.active { background: var(--gradient-gold); color: var(--dark); border-color: var(--gold); font-weight: 600; }
+
+    /* FAQ Content */
+    .faq-section { padding: 0 5% 5rem; max-width: 900px; margin: 0 auto; }
+    .faq-category { display: none; }
+    .faq-category.active { display: block; }
+    .faq-item {
+      background: var(--dark-card); border: 1px solid var(--border); border-radius: 16px;
+      margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease;
+    }
+    .faq-item:hover { border-color: var(--border-hover); }
+    .faq-question {
+      padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; font-weight: 600; font-size: 1rem; gap: 1rem;
+    }
+    .faq-question i { color: var(--gold); transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 1.5rem;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px; padding: 0 1.5rem 1.5rem;
+    }
+    .faq-answer p { color: var(--text-muted); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1rem; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer a { color: var(--gold); text-decoration: none; }
+    .faq-answer a:hover { text-decoration: underline; }
+    .faq-answer ul { margin-left: 1.5rem; color: var(--text-muted); }
+    .faq-answer ul li { margin-bottom: 0.5rem; }
+
+    /* Still Need Help */
+    .help-cta {
+      padding: 5rem 5%; text-align: center;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    }
+    .help-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; }
+    .help-cta p { color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--gradient-gold); color: var(--dark); padding: 1rem 2.5rem;
+      border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none;
+      border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: var(--shadow-gold);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); }
+
+    /* Footer */
+    footer { background: var(--dark-light); border-top: 1px solid var(--border); padding: 4rem 5% 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: 0.8rem; }
+    .footer-social a {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--dark-lighter); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 0.9rem; transition: all 0.3s ease; text-decoration: none;
+    }
+    .footer-social a:hover { background: var(--gradient-gold); color: var(--dark); border-color: var(--gold); transform: translateY(-3px); }
+    .footer-links h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 1.2rem; color: var(--text); }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.7rem; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      text-align: center; padding-top: 2rem; margin-top: 3rem;
+      border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.85rem;
+    }
+
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .menu-toggle { display: flex; }
+      nav {
+        position: fixed; top: 0; right: -100%; width: 80%; max-width: 350px; height: 100vh;
+        background: var(--dark-light); flex-direction: column; padding: 6rem 2rem 2rem;
+        border-left: 1px solid var(--border); transition: right 0.4s ease; gap: 1.5rem;
+      }
+      nav.active { right: 0; }
+      .faq-tabs { gap: 0.5rem; }
+      .faq-tab { padding: 0.6rem 1rem; font-size: 0.8rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
